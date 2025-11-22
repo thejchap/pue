@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8001:8080"
+    container_name: pue
+    develop:
+      watch:
+        - action: rebuild
+          path: ./src
